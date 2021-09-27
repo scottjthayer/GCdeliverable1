@@ -15,39 +15,39 @@ namespace deliverable1
                 Console.WriteLine("Inch will convert to fidget spinners and vise versa. Foot will convert to memes and vise versa\n");
                 
                 Console.Write("Amount: ");
-                string userAmount = Console.ReadLine();
+                string userAmount = Console.ReadLine().ToLower();
                 Console.Write("Type: ");
                 string userType = Console.ReadLine();
 
                 double userDouble = double.Parse(userAmount);
-                string newType = userType.ToLower();
+               
 
-                Console.WriteLine($"Great, you entered {userDouble} {newType}.\n");
+                Console.WriteLine($"Great, you entered {userDouble} {userType}.\n");
 
                 double convAmount = 0;
 
-                if (newType == "inch")
+                if (userType == "inch")
                 {
                     convAmount = userDouble * 3.5;
-                    Console.WriteLine($"{userDouble} {newType} converts to {convAmount} fidget spinners\n");
+                    Console.WriteLine($"{userDouble} {userType} converts to {convAmount} fidget spinners\n");
                 }
 
-                else if (newType == "fidget spinners")
+                else if (userType == "fidget spinners")
                 {
                     convAmount = userDouble / 3.5;
-                    Console.WriteLine($"{userDouble} {newType} converts to {convAmount} inches\n");
+                    Console.WriteLine($"{userDouble} {userType} converts to {convAmount} inches\n");
                 }
 
-                else if (newType == "foot")
+                else if (userType == "foot")
                 {
                     convAmount = userDouble * 5;
-                    Console.WriteLine($"{userDouble} {newType} converts to {convAmount} memes\n");
+                    Console.WriteLine($"{userDouble} {userType} converts to {convAmount} memes\n");
                 }
 
-                else if (newType == "memes")
+                else if (userType == "memes")
                 {
                     convAmount = userDouble / 5;
-                    Console.WriteLine($"{userDouble} {newType} converts to {convAmount} foot\n");
+                    Console.WriteLine($"{userDouble} {userType} converts to {convAmount} foot\n");
                 }
 
                 else
@@ -57,9 +57,9 @@ namespace deliverable1
 
                 Console.WriteLine("Would you like to do another calculation? Please enter 'y' for yes or any other key to exit program");
                 string moreConv = Console.ReadLine();
-                string newConv = moreConv.ToLower();
+                string userConv = moreConv.ToLower();
 
-                if (newConv == "y")
+                if (userConv == "y")
                 {
                     loopRun = true;
                 }
