@@ -17,7 +17,7 @@ namespace deliverable1
                 Console.Write("Amount: ");
                 string userAmount = Console.ReadLine().ToLower();
                 Console.Write("Type: ");
-                string userType = Console.ReadLine();
+                string userType = Console.ReadLine().ToLower();
 
                 double userDouble = double.Parse(userAmount);
                
